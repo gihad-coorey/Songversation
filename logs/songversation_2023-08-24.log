@@ -1,0 +1,69 @@
+2023-08-24 15:50:57,393 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/Misc Uni/2023 Sem 1/CITS3403/Songversation/app/__init__.py:42]
+2023-08-24 15:51:04,830 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/Misc Uni/2023 Sem 1/CITS3403/Songversation/app/__init__.py:42]
+2023-08-24 15:52:24,334 ERROR: Exception on /stats [GET] [in /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/flask/app.py:1744]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/Misc Uni/2023 Sem 1/CITS3403/Songversation/app/routes.py", line 51, in stats
+    tracks = get_tracks(track_ids)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/Misc Uni/2023 Sem 1/CITS3403/Songversation/app/cache_manager/track_cache.py", line 34, in get_tracks
+    track_cache = cache_track(track_response, to_cache[track_response['id']])
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/Misc Uni/2023 Sem 1/CITS3403/Songversation/app/cache_manager/track_cache.py", line 44, in cache_track
+    _cache_track_artists(track_response)
+  File "/Users/GihadCoorey11/Desktop/Misc Uni/2023 Sem 1/CITS3403/Songversation/app/cache_manager/track_cache.py", line 84, in _cache_track_artists
+    removed_track_artists.pop(track_artist_cache.id)
+KeyError: None
+2023-08-24 15:52:50,397 ERROR: Exception on /api/get-track-lyrics [GET] [in /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/flask/app.py:1744]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/asgiref/sync.py", line 240, in __call__
+    return call_result.result()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/asgiref/sync.py", line 306, in main_wrap
+    result = await self.awaitable(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/Misc Uni/2023 Sem 1/CITS3403/Songversation/app/api/spotify_api.py", line 236, in get_track_lyrics
+    return_data['track_lyrics'] = await get_lyrics(track_ids)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/Misc Uni/2023 Sem 1/CITS3403/Songversation/app/cache_manager/track_lyrics_cache.py", line 24, in get_lyrics
+    cached_lyrics = get_cached_track_lyrics(track_id)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/Misc Uni/2023 Sem 1/CITS3403/Songversation/app/cache_manager/track_lyrics_cache.py", line 90, in get_cached_track_lyrics
+    time_since_release: timedelta = datetime.utcnow() - get_tracks([track_id])[track_id].release_date
+                                                        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/Misc Uni/2023 Sem 1/CITS3403/Songversation/app/cache_manager/track_cache.py", line 34, in get_tracks
+    track_cache = cache_track(track_response, to_cache[track_response['id']])
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/Misc Uni/2023 Sem 1/CITS3403/Songversation/app/cache_manager/track_cache.py", line 44, in cache_track
+    _cache_track_artists(track_response)
+  File "/Users/GihadCoorey11/Desktop/Misc Uni/2023 Sem 1/CITS3403/Songversation/app/cache_manager/track_cache.py", line 84, in _cache_track_artists
+    removed_track_artists.pop(track_artist_cache.id)
+KeyError: None

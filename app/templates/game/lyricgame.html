@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if user_data.authorised %}
+    <div id="lyric-game">
+        <div id="selected-cover-art"></div>
+        <p id="title">Which song is this?</p>
+        <div id="lyric-box"></div>
+    </div>
+    <div class="bottom-container">
+        <div class="autocomplete-wrapper gradient-border">
+            <div id = "track-list" class = "autocomplete-options" style="display:none"></div>
+            <input id = "guess-input" class = "autocomplete-input" placeholder="Guess here...">
+        </div>
+    <div id = "button-container">
+        <button id="skip" class="button" onclick="skipButton()">Give Up</button>
+        <div id="score-container">
+            <p class="score-text" id="score-text"></p>
+        </div>
+        <button id="submit" class="button" onclick="checkButton()">Submit</button>
+    </div>
+    <div id="win-screen" style="display:none">
+        <h1 id="streak"></h1>
+        <button id="play-again" class="button" onclick="playAgain()">Play Again?</button>
+        <audio id="audioPlayer" controls>
+            <source id="audioSource" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- Win Screen Modal via Bootstrap -->
+    <div class="modal fade win-modal" id="win-modal" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body win-modal-body">
+                    <img id="track-image" src="#" alt="Album Photo">
+                    <br>
+                    <h5 id="track-name"></h5>
+                    <div id="streak-score">hello test</div>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="playAgain()">Play Again?</button>
+                    
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" 
+                    onclick="window.location.href = `{{ url_for('index') }}` ";
+                    >Return Home</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+    {% endif %}
+    {% include "loader.html" %}
+{% endblock %}

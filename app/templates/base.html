@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{{ title }}</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+        
+        <!-- Get FontAwesome Icons CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        
+        <!-- jQuery library -->
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous">
+        </script>    
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- favicon -->
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+        {% block scripts %}
+        {% endblock %}
+
+        {% assets "css_all" %}
+        <link rel="stylesheet" href="{{ ASSET_URL }}">    
+        {% endassets %}
+
+        {% assets "js_all" %}
+        <script src="{{ ASSET_URL }}"></script> 
+        {% endassets %}
+
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        {% include "nav.html" %}
+        <div class="welcome-container">
+
+            <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+            <svg class="welcome-bubble" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="9" cy="18" r="3"/>
+                <path d="M12 18V3"/>
+                <path d="M12 3L18 4V8L12 7V3Z"/>
+            </svg>
+            <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+            <svg class="welcome-bubble" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="6" cy="18" r="3"/>
+                <path d="M9 18V5"/>
+                <path d="M21 3L9 5"/>
+                <path d="M21 7L9 9"/>
+                <circle cx="18" cy="16" r="3"/>
+                <path d="M21 16V3"/>
+            </svg>
+            <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+            <svg class="welcome-bubble" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="9" cy="18" r="3"/>
+                <path d="M12 18V3"/>
+                <path d="M12 3L18 4V8L12 7V3Z"/>
+            </svg>
+            <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+            <svg class="welcome-bubble" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="6" cy="18" r="3"/>
+                <path d="M9 18V5"/>
+                <path d="M21 3L9 5"/>
+                <path d="M21 7L9 9"/>
+                <circle cx="18" cy="16" r="3"/>
+                <path d="M21 16V3"/>
+            </svg>
+            <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+            <svg class="welcome-bubble" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="9" cy="18" r="3"/>
+                <path d="M12 18V3"/>
+                <path d="M12 3L18 4V8L12 7V3Z"/>
+            </svg>
+            <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+            <svg class="welcome-bubble" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="6" cy="18" r="3"/>
+                <path d="M9 18V5"/>
+                <path d="M21 3L9 5"/>
+                <path d="M21 7L9 9"/>
+                <circle cx="18" cy="16" r="3"/>
+                <path d="M21 16V3"/>
+            </svg>
+            <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+            <svg class="welcome-bubble" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="9" cy="18" r="3"/>
+                <path d="M12 18V3"/>
+                <path d="M12 3L18 4V8L12 7V3Z"/>
+            </svg>
+            <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+            <svg class="welcome-bubble" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="6" cy="18" r="3"/>
+                <path d="M9 18V5"/>
+                <path d="M21 3L9 5"/>
+                <path d="M21 7L9 9"/>
+                <circle cx="18" cy="16" r="3"/>
+                <path d="M21 16V3"/>
+            </svg>
+            <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+            <svg class="welcome-bubble" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="9" cy="18" r="3"/>
+                <path d="M12 18V3"/>
+                <path d="M12 3L18 4V8L12 7V3Z"/>
+            </svg>
+            <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+            <svg class="welcome-bubble" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="6" cy="18" r="3"/>
+                <path d="M9 18V5"/>
+                <path d="M21 3L9 5"/>
+                <path d="M21 7L9 9"/>
+                <circle cx="18" cy="16" r="3"/>
+                <path d="M21 16V3"/>
+            </svg>
+            <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+            <svg class="welcome-bubble" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="9" cy="18" r="3"/>
+                <path d="M12 18V3"/>
+                <path d="M12 3L18 4V8L12 7V3Z"/>
+            </svg>
+            
+        </div>
+
+        {% for message in get_flashed_messages() %}
+        <div class="alert alert-success alert-dismissible">
+            <span type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></span>
+            {{ message }}
+        </div>
+        {% endfor %}
+
+        {% block content%}
+        {% endblock %}
+    </body>
+</html>

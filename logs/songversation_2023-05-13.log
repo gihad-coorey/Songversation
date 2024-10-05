@@ -1,0 +1,516 @@
+2023-05-13 11:51:27,519 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 11:51:30,476 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 11:51:36,734 ERROR: Exception on / [GET] [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py:1744]
+Traceback (most recent call last):
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/spotipy/oauth2.py", line 588, in refresh_access_token
+    response.raise_for_status()
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://accounts.spotify.com/api/token
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/routes.py", line 21, in index
+    return render_template('index.html', title='Home - Songversation', user_data=SpotifyWebUserData())
+                                                                                 ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/helpers/spotify_helper.py", line 80, in __init__
+    sp = SpotifyHelper()
+         ^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/helpers/spotify_helper.py", line 19, in __init__
+    session['token_info'], authorised = self.get_token()
+                                        ^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/helpers/spotify_helper.py", line 51, in get_token
+    token_info = sp_oauth.refresh_access_token(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/spotipy/oauth2.py", line 596, in refresh_access_token
+    self._handle_oauth_error(http_error)
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/spotipy/oauth2.py", line 146, in _handle_oauth_error
+    raise SpotifyOauthError(
+spotipy.oauth2.SpotifyOauthError: error: invalid_grant, error_description: Refresh token revoked
+2023-05-13 11:51:37,017 ERROR: Exception on /favicon.ico [GET] [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py:1744]
+Traceback (most recent call last):
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1788, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1770, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/ctx.py", line 351, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/werkzeug/routing/map.py", line 624, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1669, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1609, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/errors.py", line 6, in not_found_error
+    return render_template('errors/404.html'), 404
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/templates/errors/404.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/templates/base.html", line 58, in top-level template code
+    {% include "nav.html" %}
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/templates/nav.html", line 4, in top-level template code
+    {% if user_data.authorised %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'user_data' is undefined
+2023-05-13 11:51:41,916 ERROR: Exception on / [GET] [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py:1744]
+Traceback (most recent call last):
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/spotipy/oauth2.py", line 588, in refresh_access_token
+    response.raise_for_status()
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://accounts.spotify.com/api/token
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/routes.py", line 21, in index
+    return render_template('index.html', title='Home - Songversation', user_data=SpotifyWebUserData())
+                                                                                 ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/helpers/spotify_helper.py", line 80, in __init__
+    sp = SpotifyHelper()
+         ^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/helpers/spotify_helper.py", line 19, in __init__
+    session['token_info'], authorised = self.get_token()
+                                        ^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/helpers/spotify_helper.py", line 51, in get_token
+    token_info = sp_oauth.refresh_access_token(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/spotipy/oauth2.py", line 596, in refresh_access_token
+    self._handle_oauth_error(http_error)
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/spotipy/oauth2.py", line 146, in _handle_oauth_error
+    raise SpotifyOauthError(
+spotipy.oauth2.SpotifyOauthError: error: invalid_grant, error_description: Refresh token revoked
+2023-05-13 11:51:42,165 ERROR: Exception on /favicon.ico [GET] [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py:1744]
+Traceback (most recent call last):
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1788, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1770, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/ctx.py", line 351, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/werkzeug/routing/map.py", line 624, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1669, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1609, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/errors.py", line 6, in not_found_error
+    return render_template('errors/404.html'), 404
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/templates/errors/404.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/templates/base.html", line 58, in top-level template code
+    {% include "nav.html" %}
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/templates/nav.html", line 4, in top-level template code
+    {% if user_data.authorised %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'user_data' is undefined
+2023-05-13 11:58:00,757 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 11:58:07,845 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 11:58:10,946 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 12:13:35,593 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 12:14:21,442 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 12:17:17,244 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 12:18:03,434 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 12:21:05,983 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 12:21:08,785 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 12:22:25,007 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 12:23:52,572 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 12:25:12,153 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 12:28:13,004 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 12:35:46,130 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 12:36:36,285 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 12:37:24,185 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 12:37:51,937 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 12:39:05,900 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 12:39:53,745 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 12:40:37,304 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 12:41:15,013 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 12:43:58,119 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 12:44:23,488 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 12:44:44,990 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 12:52:46,308 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 12:53:18,771 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 12:53:50,451 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 12:54:32,489 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 13:03:21,595 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 13:05:39,999 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 13:07:30,735 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 13:08:02,133 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 13:09:48,921 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 13:11:07,001 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 13:13:37,113 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 13:14:25,028 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 13:14:39,744 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 13:15:13,169 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 13:15:39,771 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 13:16:41,736 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 13:25:30,662 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 13:33:43,467 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 13:34:58,538 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 13:35:30,267 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 13:36:12,273 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 13:36:41,893 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 13:38:03,831 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 13:38:46,878 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 13:42:30,777 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 13:42:44,047 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 13:43:11,985 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 13:43:22,469 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 13:43:44,656 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 14:03:40,179 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 14:03:43,237 ERROR: Exception on / [GET] [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py:1744]
+Traceback (most recent call last):
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/spotipy/oauth2.py", line 588, in refresh_access_token
+    response.raise_for_status()
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://accounts.spotify.com/api/token
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/routes.py", line 21, in index
+    return render_template('index.html', title='Home - Songversation', user_data=SpotifyWebUserData())
+                                                                                 ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/helpers/spotify_helper.py", line 80, in __init__
+    sp = SpotifyHelper()
+         ^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/helpers/spotify_helper.py", line 19, in __init__
+    session['token_info'], authorised = self.get_token()
+                                        ^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/helpers/spotify_helper.py", line 51, in get_token
+    token_info = sp_oauth.refresh_access_token(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/spotipy/oauth2.py", line 596, in refresh_access_token
+    self._handle_oauth_error(http_error)
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/spotipy/oauth2.py", line 146, in _handle_oauth_error
+    raise SpotifyOauthError(
+spotipy.oauth2.SpotifyOauthError: error: invalid_grant, error_description: Refresh token revoked
+2023-05-13 14:03:43,512 ERROR: Exception on /favicon.ico [GET] [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py:1744]
+Traceback (most recent call last):
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1788, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1770, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/ctx.py", line 351, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/werkzeug/routing/map.py", line 624, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1669, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1609, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/errors.py", line 6, in not_found_error
+    return render_template('errors/404.html'), 404
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/templates/errors/404.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/templates/base.html", line 58, in top-level template code
+    {% include "nav.html" %}
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/templates/nav.html", line 4, in top-level template code
+    {% if user_data.authorised %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'user_data' is undefined
+2023-05-13 14:04:46,927 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 14:05:38,506 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 14:19:49,928 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 14:20:37,006 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 14:20:58,121 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 14:21:14,763 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 14:21:48,711 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 14:22:20,323 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 14:23:25,822 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 14:23:40,488 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 14:24:01,948 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 14:24:43,116 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 14:24:56,871 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 14:25:19,843 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 14:25:51,353 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 14:26:18,888 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 14:26:43,337 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 14:27:11,830 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 14:27:36,964 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 14:28:16,412 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 14:28:49,966 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 14:29:27,480 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 14:29:47,200 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 14:30:20,795 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 14:33:43,855 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 14:37:38,500 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 14:38:21,864 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 14:38:39,928 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 14:58:06,229 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 15:23:51,618 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 15:29:01,449 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 16:12:56,358 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 16:15:16,867 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 16:16:38,901 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 16:17:32,490 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 16:19:17,602 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 16:20:29,474 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 16:20:39,897 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 16:20:58,696 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 16:26:20,456 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 16:26:38,859 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 16:28:44,486 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 16:29:53,947 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 16:30:22,285 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 16:30:57,372 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 16:35:35,894 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 16:37:04,668 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 16:37:54,253 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 16:42:07,315 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 16:42:08,939 ERROR: Exception on /index [GET] [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py:1744]
+Traceback (most recent call last):
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/routes.py", line 21, in index
+    return render_template('index.html', title='Home - Songversation', user_data=SpotifyWebUserData())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/templates/base.html", line 58, in top-level template code
+    {% include "nav.html" %}
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/templates/nav.html", line 46, in top-level template code
+    <a href="{{ url_for(stats) }}">Stats</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1981, in url_for
+    if endpoint[:1] == ".":
+       ~~~~~~~~^^^^
+jinja2.exceptions.UndefinedError: 'stats' is undefined
+2023-05-13 16:42:08,983 ERROR: Exception on /favicon.ico [GET] [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py:1744]
+Traceback (most recent call last):
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1788, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1770, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/ctx.py", line 351, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/werkzeug/routing/map.py", line 624, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1669, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1609, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/errors.py", line 6, in not_found_error
+    return render_template('errors/404.html'), 404
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/templates/errors/404.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/templates/base.html", line 58, in top-level template code
+    {% include "nav.html" %}
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/templates/nav.html", line 4, in top-level template code
+    {% if user_data.authorised %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'user_data' is undefined
+2023-05-13 16:42:37,646 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 16:42:56,641 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 16:50:49,556 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 16:51:48,815 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 16:52:01,856 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 16:53:25,660 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 16:53:42,989 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 16:54:46,453 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 16:55:26,738 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 16:56:09,814 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 16:56:25,300 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 17:01:18,076 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 17:05:07,517 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 23:33:07,890 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 23:47:55,925 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 23:48:25,213 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 23:48:54,256 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 23:49:12,588 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 23:49:50,588 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 23:50:54,900 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 23:51:24,478 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 23:54:00,640 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 23:54:42,475 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 23:55:01,572 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 23:55:46,214 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 23:56:13,054 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 23:56:37,624 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 23:57:22,112 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-13 23:59:38,944 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]

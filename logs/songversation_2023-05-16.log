@@ -1,0 +1,65 @@
+2023-05-16 13:05:50,289 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-16 13:05:54,636 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-16 13:05:57,917 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-16 13:16:31,162 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-16 13:43:54,723 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-16 13:44:56,520 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-16 14:04:34,360 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-16 19:27:01,551 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-16 19:27:09,104 INFO: Starting Songversation... [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/__init__.py:42]
+2023-05-16 19:29:33,735 ERROR: Exception on /favicon.ico [GET] [in /Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py:1744]
+Traceback (most recent call last):
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1788, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1770, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/ctx.py", line 351, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/werkzeug/routing/map.py", line 624, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1669, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/app.py", line 1609, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/errors.py", line 6, in not_found_error
+    return render_template('errors/404.html'), 404
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/templates/errors/404.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/templates/base.html", line 39, in top-level template code
+    {% include "nav.html" %}
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/app/templates/nav.html", line 4, in top-level template code
+    {% if user_data.authorised %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/GihadCoorey11/Desktop/CITS3403/Songversation/Songversation-venv/lib/python3.11/site-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'user_data' is undefined
